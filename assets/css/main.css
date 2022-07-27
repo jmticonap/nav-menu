@@ -1,0 +1,96 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --page-cover--img__max-width: 500px;
+    --page-cover--img__min-width: 375px;
+
+    --logo__width: 124px;
+    --menu-links__padding: 1rem;
+}
+
+body{
+    background-color: gray;
+}
+
+#btn_toggle{
+    display: none;
+}
+
+.page-cover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 1.5rem;
+
+    position: relative;
+}
+.img-logo{
+    width: var(--logo__width);
+    object-fit: contain;
+}
+
+.toggle-menu{
+    
+}
+
+.menu-links{
+    padding: 1rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+
+    list-style: none;
+
+    position: absolute;
+    top: 5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+
+    background-color: white;
+}
+
+.menu-links::after{
+    content: "";
+    display: block;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid #fff;
+    border-right: 15px solid #fff;
+    border-left: 15px solid transparent;
+    position: absolute;
+    right: 0;
+    top: -30px;
+}
+
+.menu-links__li{
+    text-align: center;
+    padding: var(--menu-links__padding);
+}
+
+.menu-links__li__a{
+    text-decoration: none;
+    padding: var(--menu-links__padding);
+}
+
+.menu-links__li__a:hover{
+    background-color: orange;
+    border-radius: 1.5rem;
+}
+
+.img-background{
+    max-width: var(--page-cover--img__max-width);
+    min-width: var(--page-cover--img__min-width);
+    width: 100vw;
+}
