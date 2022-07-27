@@ -8,9 +8,11 @@
 :root{
     --page-cover--img__max-width: 500px;
     --page-cover--img__min-width: 375px;
+    --page-cover__backgroun-color: #00B8FF;
 
     --logo__width: 124px;
-    --menu-links__padding: 1rem 3rem;
+    --menu-links__padding: 1rem 2rem;
+    --menu-links__padding-desktop: 0.5rem 1.5rem;
 }
 
 body{
@@ -25,6 +27,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    background-color: var(--page-cover__backgroun-color);
 }
 
 .nav{
@@ -82,11 +86,13 @@ body{
 .menu-links__li__a{
     text-decoration: none;
     padding: var(--menu-links__padding);
+
 }
 
 .menu-links__li__a:hover{
     background-color: orange;
     border-radius: 1.5rem;
+    /*text-transform: uppercase;*/
 }
 
 #btn_toggle:checked ~ .menu-links{
@@ -97,4 +103,44 @@ body{
     max-width: var(--page-cover--img__max-width);
     min-width: var(--page-cover--img__min-width);
     width: 100vw;
+}
+
+@media screen and (min-width: 600px) {
+    .nav{
+        padding-right: 0;
+    }
+
+    .toggle-menu{
+        flex-flow: row-reverse nowrap;
+    }
+
+    .menu-links{
+        position: static;
+        display: flex !important;
+        flex-flow: row nowrap;
+        justify-content: end;
+
+        background-color: transparent;
+    }
+
+    .menu-links__li{
+        text-align: center;
+        padding: 0;
+    }
+    
+    .menu-links__li__a{
+        text-decoration: none;
+        padding: var(--menu-links__padding);
+        color: #fff
+    }
+    
+    .menu-links__li__a:hover{
+        background-color: #fff;
+        border-radius: 1.5rem;
+        color: black;
+    }
+
+    .btn_toggle__lbl{
+        display: none;
+    }
 }
