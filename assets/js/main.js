@@ -17,7 +17,7 @@ function toggle_off() {
 
 function title_h1_resize() {
     let font_size = title_h1.style.fontSize
-    console.log(font_size)
+  
     if ( font_size === "" || parseFloat(font_size.substring(0, font_size.length - 3)) <= 7.0) {
         const factor = 0.008
         let size = document.body.clientWidth * factor
@@ -29,7 +29,6 @@ function title_h1_resize() {
 
 
 document.body.onload = function () {
-    console.log("PAgina cargada...")
     btn_toggle__lbl.addEventListener("click", click_toggle, false)
     document.body.onresize = function () {
         toggle_off()
