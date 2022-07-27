@@ -10,7 +10,7 @@
     --page-cover--img__min-width: 375px;
 
     --logo__width: 124px;
-    --menu-links__padding: 1rem;
+    --menu-links__padding: 1rem 3rem;
 }
 
 body{
@@ -87,6 +87,10 @@ body{
 .menu-links__li__a:hover{
     background-color: orange;
     border-radius: 1.5rem;
+}
+
+#btn_toggle:checked ~ .menu-links{
+    display: none;
 }
 
 .img-background{
