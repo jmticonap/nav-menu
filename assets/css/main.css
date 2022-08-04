@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@import 'nav.css';
 
 * {
     padding: 0;
@@ -17,13 +19,10 @@
 }
 
 body {
-    font-family: 'Happy Monkey', cursive;
+    font-family: 'Montserrat', sans-serif;
     background-color: gray;
 }
 
-#btn_toggle {
-    display: none;
-}
 
 .page-cover {
     display: flex;
@@ -37,80 +36,6 @@ body {
     position: relative;
 }
 
-.nav {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    width: 100vw;
-    padding: 1.5rem;
-
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
-.img-logo {
-    width: var(--logo__width);
-    object-fit: contain;
-}
-
-.toggle-menu {}
-
-.menu-links {
-    padding: 1rem;
-
-    display: none;
-    flex-flow: column nowrap;
-    gap: 1rem;
-
-    list-style: none;
-
-    position: absolute;
-    top: 5rem;
-    left: 1.5rem;
-    right: 1.5rem;
-
-    background-color: white;
-}
-
-.menu-links::after {
-    content: "";
-    display: block;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid #fff;
-    border-right: 15px solid #fff;
-    border-left: 15px solid transparent;
-    position: absolute;
-    right: 0;
-    top: -30px;
-}
-
-.menu-links:focus{
-    border: 2px dashed black;
-}
-
-.menu-links__li {
-    text-align: center;
-    padding: var(--menu-links__padding);
-}
-
-.menu-links__li__a {
-    text-decoration: none;
-    padding: var(--menu-links__padding);
-
-}
-
-.menu-links__li__a:hover {
-    background-color: orange;
-    border-radius: 1.5rem;
-    /*text-transform: uppercase;*/
-}
-
-/* #btn_toggle:checked~.menu-links {
-    display: none;
-} */
 
 .img-background {
     max-width: var(--page-cover--img__max-width);
@@ -142,42 +67,5 @@ body {
 }
 
 @media screen and (min-width: 600px) {
-    .nav {
-        padding-right: 0;
-    }
-
-    .toggle-menu {
-        flex-flow: row-reverse nowrap;
-    }
-
-    .menu-links {
-        position: static;
-        display: flex !important;
-        flex-flow: row nowrap;
-        justify-content: end;
-
-        background-color: transparent;
-    }
-
-    .menu-links__li {
-        text-align: center;
-        padding: 0;
-    }
-
-    .menu-links__li__a {
-        text-decoration: none;
-        padding: var(--menu-links__padding);
-        color: #fff
-    }
-
-    .menu-links__li__a:hover {
-        background-color: #fff;
-        border-radius: 1.5rem;
-        color: black;
-    }
-
-    .btn_toggle__lbl {
-        display: none;
-    }
 
 }
